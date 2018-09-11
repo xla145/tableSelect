@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="layui/layui.all.js"></script>
+	<link rel="stylesheet" href="layui/css/layui.css">
+	<script type="text/javascript" src="tableSelect.js"></script>
+	<title>TableSelect</title>
+</head>
+
+<body>
+	<form class="layui-form" action="" style="padding:20px;">
+		<div class="layui-form-item">
+			<label class="layui-form-label">多选</label>
+			<div class="layui-input-inline">
+				<input type="text" name="" placeholder="请输入" autocomplete="off" class="layui-input" id="demo" readonly>
+				<input type="hidden" class="table-ids">
+			</div>
+		</div>
+	</form>
+</body>
+<script type="text/javascript">
+	layui.use('tableSelect',function () {
+        let $ = layui.jquery, tableSelect = layui.tableSelect;
+        tableSelect.render({
+            elem: '#demo',
+            searchKey: 'username',
+            checkDataElem: ".table-ids",
+            table: {
+                url:'table.json',
+				method: 'post',
+                cols: [[
+                    { type: 'checkbox' },
+                    { field: 'id', title: 'ID', width:100 },
+                    { field: 'username', title: '姓名', width:300 },
+                    { field: 'sex', title: '性别', width:100 }
+                ]],
+                page: true,
+                height: 315
+            },
+            done: function (elem, data) {
+                let newJson = [];
+                let ids = [];
+                layui.each(data.data, function (index, item) {
+                    newJson.push(item.username);
+                    ids.push(item.id);
+                })
+                elem.val(newJson.join(","));
+                $(".table-ids").val(ids.join(","));
+            }
+        })
+    })
+</script>
+
+</html>
