@@ -9,38 +9,7 @@
    不能实现跨页选择，如果有兴趣的小伙伴想扩展该组件可以参考： http://www.111cn.net/wy/165048.htm
    
    使用说明：
-   <script type="text/javascript">
-      layui.use('tableSelect',function () {
-             let $ = layui.jquery, tableSelect = layui.tableSelect;
-             tableSelect.render({
-                 elem: '#demo', 
-                 searchKey: 'username',
-                 checkDataElem: ".table-ids", // 用于存储回显值
-                 table: { // layui table 一些属性 
-                     url:'table.json',
-                     method: 'post',
-                     cols: [[
-                         { type: 'checkbox' },
-                         { field: 'id', title: 'ID', width:100 },
-                         { field: 'username', title: '姓名', width:300 },
-                         { field: 'sex', title: '性别', width:100 }
-                     ]],
-                     page: true,
-                     height: 315
-                 },
-                 done: function (elem, data) { // 用户选中数据触发
-                     let newJson = [];
-                     let ids = [];
-                     layui.each(data.data, function (index, item) {
-                         newJson.push(item.username);
-                         ids.push(item.id);
-                     })
-                     elem.val(newJson.join(","));
-                     $(".table-ids").val(ids.join(",")); // 保存回显的值
-                 }
-             })
-         })
-  </script>
+   ![输入图片说明](https://github.com/xla145/tableSelect/blob/master/screenshots/1536654486.jpg "1536654486.png")
   首先引入组件，不懂怎么引入组件，请参考：https://www.layui.com/doc/ 
  
  效果图
