@@ -11,10 +11,10 @@
    不能实现跨页选择，如果有兴趣的小伙伴想扩展该组件可以参考： http://www.111cn.net/wy/165048.htm
    
    使用说明：
-   ![输入图片说明](https://github.com/xla145/tableSelect/blob/master/screenshots/1536654486.jpg "1536654486.png")
+   
   首先引入组件，不懂怎么引入组件，请参考：https://www.layui.com/doc/ 
+  ![输入图片说明](https://github.com/xla145/tableSelect/blob/master/screenshots/1536654486.jpg "1536654486.png")
  
- 效果图
  ## 效果图
 ![输入图片说明](https://github.com/xla145/tableSelect/blob/master/screenshots/1536653561.jpg "1536653561.png")
 参考：
