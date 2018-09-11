@@ -18,5 +18,7 @@
  ## 效果图
 ![输入图片说明](https://github.com/xla145/tableSelect/blob/master/screenshots/1536653561.jpg "1536653561.png")
 参考：
-https://gitee.com/lolicode/layui_component_tableselect 
+
+https://gitee.com/lolicode/layui_component_tableselect
+ 
 http://www.111cn.net/wy/165048.htm
